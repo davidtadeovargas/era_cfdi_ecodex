@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioSeguridad.svc" uri="xml-resources/web-service-references/ServicioSeguridad/wsdl/wsdev.ecodex.com.mx_2044/ServicioSeguridad.svc.xml"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioTimbrado.svc" uri="xml-resources/web-service-references/ServicioTimbrado_2/wsdl/wsdev.ecodex.com.mx_2044/ServicioTimbrado.svc.xml"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioRepositorio.svc?wsdl" uri="xml-resources/web-service-references/ServicioRepositorio/wsdl/wsdev.ecodex.com.mx_2044/ServicioRepositorio.svc.wsdl"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioRepositorio.svc?xsd=xsd0" uri="xml-resources/web-service-references/ServicioRepositorio/wsdl/wsdev.ecodex.com.mx_2044/ServicioRepositorio.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioRepositorio.svc?xsd=xsd1" uri="xml-resources/web-service-references/ServicioRepositorio/wsdl/wsdev.ecodex.com.mx_2044/ServicioRepositorio.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioSeguridad.svc?wsdl" uri="xml-resources/web-service-references/ServicioSeguridad/wsdl/wsdev.ecodex.com.mx_2044/ServicioSeguridad.svc.wsdl"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioSeguridad.svc?xsd=xsd0" uri="xml-resources/web-service-references/ServicioSeguridad/wsdl/wsdev.ecodex.com.mx_2044/ServicioSeguridad.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioSeguridad.svc?xsd=xsd1" uri="xml-resources/web-service-references/ServicioSeguridad/wsdl/wsdev.ecodex.com.mx_2044/ServicioSeguridad.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioClientes.svc?wsdl" uri="xml-resources/web-service-references/ServicioClientes/wsdl/wsdev.ecodex.com.mx_2044/ServicioClientes.svc.wsdl"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioClientes.svc?xsd=xsd0" uri="xml-resources/web-service-references/ServicioClientes/wsdl/wsdev.ecodex.com.mx_2044/ServicioClientes.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioClientes.svc?xsd=xsd1" uri="xml-resources/web-service-references/ServicioClientes/wsdl/wsdev.ecodex.com.mx_2044/ServicioClientes.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioClientes.svc?xsd=xsd2" uri="xml-resources/web-service-references/ServicioClientes/wsdl/wsdev.ecodex.com.mx_2044/ServicioClientes.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioCancelacion.svc?wsdl" uri="xml-resources/web-service-references/ServicioCancelacion/wsdl/wsdev.ecodex.com.mx_2044/ServicioCancelacion.svc.wsdl"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioCancelacion.svc?xsd=xsd0" uri="xml-resources/web-service-references/ServicioCancelacion/wsdl/wsdev.ecodex.com.mx_2044/ServicioCancelacion.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioCancelacion.svc?xsd=xsd1" uri="xml-resources/web-service-references/ServicioCancelacion/wsdl/wsdev.ecodex.com.mx_2044/ServicioCancelacion.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioTimbrado.svc?wsdl" uri="xml-resources/web-service-references/ServicioTimbrado/wsdl/wsdev.ecodex.com.mx_2044/ServicioTimbrado.svc.wsdl"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioTimbrado.svc?xsd=xsd0" uri="xml-resources/web-service-references/ServicioTimbrado/wsdl/wsdev.ecodex.com.mx_2044/ServicioTimbrado.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://wsdev.ecodex.com.mx:2044/ServicioTimbrado.svc?xsd=xsd1" uri="xml-resources/web-service-references/ServicioTimbrado/wsdl/wsdev.ecodex.com.mx_2044/ServicioTimbrado.svc.xsd_xsd1.xsd"/>
+    <system systemId="file:/C:/Users/augus/OneDrive/Documentos/Easy%20Retail%20Gas%20Campanita/xmlCfdi/xmlCfdi/../../CFDI%203.3/cfdv33.xsd" uri="xml-resources/jaxb/CFDI33/cfdv33.xsd"/>
+    <system systemId="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd" uri="xml-resources/jaxb/CFDI33/www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd"/>
+    <system systemId="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd" uri="xml-resources/jaxb/CFDI33/www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd"/>
+</catalog>

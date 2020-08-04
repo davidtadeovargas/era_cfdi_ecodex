@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-ServicioRepositorio" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServicioRepositorio"/>
+        <property name="wsdl-ServicioRepositorio" location="xml-resources/web-service-references/ServicioRepositorio/wsdl/wsdev.ecodex.com.mx_2044/ServicioRepositorio.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServicioRepositorio" destdir="${build.generated.dir}/jax-wsCache/ServicioRepositorio" wsdl="${wsdl-ServicioRepositorio}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://wsdev.ecodex.com.mx:2044/ServicioRepositorio.svc?wsdl" xnocompile="true" xendorsed="true" package="pruebaRepositorio">
+            <depends file="${wsdl-ServicioRepositorio}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServicioRepositorio"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServicioRepositorio">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServicioRepositorio" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServicioRepositorio"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/pruebaRepositorio"/>
+    </target>
+    <target name="wsimport-client-ServicioSeguridad" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServicioSeguridad"/>
+        <property name="wsdl-ServicioSeguridad" location="xml-resources/web-service-references/ServicioSeguridad/wsdl/wsdev.ecodex.com.mx_2044/ServicioSeguridad.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServicioSeguridad" destdir="${build.generated.dir}/jax-wsCache/ServicioSeguridad" wsdl="${wsdl-ServicioSeguridad}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://wsdev.ecodex.com.mx:2044/ServicioSeguridad.svc?wsdl" xnocompile="true" xendorsed="true" package="pruebaSeguridad">
+            <depends file="${wsdl-ServicioSeguridad}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServicioSeguridad"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServicioSeguridad">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServicioSeguridad" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServicioSeguridad"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/pruebaSeguridad"/>
+    </target>
+    <target name="wsimport-client-ServicioClientes" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServicioClientes"/>
+        <property name="wsdl-ServicioClientes" location="xml-resources/web-service-references/ServicioClientes/wsdl/wsdev.ecodex.com.mx_2044/ServicioClientes.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServicioClientes" destdir="${build.generated.dir}/jax-wsCache/ServicioClientes" wsdl="${wsdl-ServicioClientes}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://wsdev.ecodex.com.mx:2044/ServicioClientes.svc?wsdl" xnocompile="true" xendorsed="true" package="pruebaClientes">
+            <depends file="${wsdl-ServicioClientes}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServicioClientes"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServicioClientes">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServicioClientes" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServicioClientes"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/pruebaClientes"/>
+    </target>
+    <target name="wsimport-client-ServicioCancelacion" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServicioCancelacion"/>
+        <property name="wsdl-ServicioCancelacion" location="xml-resources/web-service-references/ServicioCancelacion/wsdl/wsdev.ecodex.com.mx_2044/ServicioCancelacion.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServicioCancelacion" destdir="${build.generated.dir}/jax-wsCache/ServicioCancelacion" wsdl="${wsdl-ServicioCancelacion}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://wsdev.ecodex.com.mx:2044/ServicioCancelacion.svc?wsdl" xnocompile="true" xendorsed="true" package="pruebaCancelacion">
+            <depends file="${wsdl-ServicioCancelacion}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServicioCancelacion"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServicioCancelacion">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServicioCancelacion" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServicioCancelacion"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/pruebaCancelacion"/>
+    </target>
+    <target name="wsimport-client-ServicioTimbrado" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServicioTimbrado"/>
+        <property name="wsdl-ServicioTimbrado" location="xml-resources/web-service-references/ServicioTimbrado/wsdl/wsdev.ecodex.com.mx_2044/ServicioTimbrado.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServicioTimbrado" destdir="${build.generated.dir}/jax-wsCache/ServicioTimbrado" wsdl="${wsdl-ServicioTimbrado}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://wsdev.ecodex.com.mx:2044/ServicioTimbrado.svc?wsdl" xnocompile="true" xendorsed="true" package="pruebaTimbrado">
+            <depends file="${wsdl-ServicioTimbrado}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServicioTimbrado"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServicioTimbrado">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServicioTimbrado" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServicioTimbrado"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/pruebaTimbrado"/>
+    </target>
+    <target name="wsimport-client-ServicioRepositorio_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServicioRepositorio_1"/>
+        <property name="wsdl-ServicioRepositorio_1" location="xml-resources/web-service-references/ServicioRepositorio_1/wsdl/servicios.ecodex.com.mx_4040/ServicioRepositorio.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServicioRepositorio_1" destdir="${build.generated.dir}/jax-wsCache/ServicioRepositorio_1" wsdl="${wsdl-ServicioRepositorio_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://servicios.ecodex.com.mx:4040/ServicioRepositorio.svc?wsdl" xnocompile="true" xendorsed="true" package="Repositorio">
+            <depends file="${wsdl-ServicioRepositorio_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServicioRepositorio_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServicioRepositorio_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServicioRepositorio_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServicioRepositorio_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/Repositorio"/>
+    </target>
+    <target name="wsimport-client-ServicioSeguridad_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServicioSeguridad_1"/>
+        <property name="wsdl-ServicioSeguridad_1" location="xml-resources/web-service-references/ServicioSeguridad_1/wsdl/servicios.ecodex.com.mx_4040/ServicioSeguridad.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServicioSeguridad_1" destdir="${build.generated.dir}/jax-wsCache/ServicioSeguridad_1" wsdl="${wsdl-ServicioSeguridad_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://servicios.ecodex.com.mx:4040/ServicioSeguridad.svc?wsdl" xnocompile="true" xendorsed="true" package="Seguridad">
+            <depends file="${wsdl-ServicioSeguridad_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServicioSeguridad_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServicioSeguridad_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServicioSeguridad_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServicioSeguridad_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/Seguridad"/>
+    </target>
+    <target name="wsimport-client-ServicioClientes_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServicioClientes_1"/>
+        <property name="wsdl-ServicioClientes_1" location="xml-resources/web-service-references/ServicioClientes_1/wsdl/servicios.ecodex.com.mx_4040/ServicioClientes.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServicioClientes_1" destdir="${build.generated.dir}/jax-wsCache/ServicioClientes_1" wsdl="${wsdl-ServicioClientes_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://servicios.ecodex.com.mx:4040/ServicioClientes.svc?wsdl" xnocompile="true" xendorsed="true" package="Clientes">
+            <depends file="${wsdl-ServicioClientes_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServicioClientes_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServicioClientes_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServicioClientes_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServicioClientes_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/Clientes"/>
+    </target>
+    <target name="wsimport-client-ServicioTimbrado_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServicioTimbrado_1"/>
+        <property name="wsdl-ServicioTimbrado_1" location="xml-resources/web-service-references/ServicioTimbrado_1/wsdl/servicios.ecodex.com.mx_4040/ServicioTimbrado.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServicioTimbrado_1" destdir="${build.generated.dir}/jax-wsCache/ServicioTimbrado_1" wsdl="${wsdl-ServicioTimbrado_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://servicios.ecodex.com.mx:4040/ServicioTimbrado.svc?wsdl" xnocompile="true" xendorsed="true" package="Timbrado">
+            <depends file="${wsdl-ServicioTimbrado_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServicioTimbrado_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServicioTimbrado_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServicioTimbrado_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServicioTimbrado_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/Timbrado"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-ServicioRepositorio, wsimport-client-ServicioSeguridad, wsimport-client-ServicioClientes, wsimport-client-ServicioCancelacion, wsimport-client-ServicioTimbrado, wsimport-client-ServicioRepositorio_1, wsimport-client-ServicioSeguridad_1, wsimport-client-ServicioClientes_1, wsimport-client-ServicioTimbrado_1"/>
+</project>
