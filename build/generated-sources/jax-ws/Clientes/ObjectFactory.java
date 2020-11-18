@@ -58,22 +58,22 @@ public class ObjectFactory {
     private final static QName _Byte_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "byte");
     private final static QName _Double_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "double");
     private final static QName _QName_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "QName");
+    private final static QName _SolicitudAvisosNuevosToken_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Token");
+    private final static QName _SolicitudAvisosNuevosRFC_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "RFC");
+    private final static QName _SolicitudRegistroClienteRfcIntegrador_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "RfcIntegrador");
+    private final static QName _SolicitudRegistroClienteEmisor_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Emisor");
+    private final static QName _RespuestaRegistroRespuesta_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Respuesta");
+    private final static QName _RespuestaEstatusCuentaEstatus_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Estatus");
+    private final static QName _ResultadoRegistroEmisorClaveCertificado_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "ClaveCertificado");
     private final static QName _CuentaEstatusCodigo_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Codigo");
     private final static QName _CuentaEstatusCertificados_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Certificados");
     private final static QName _CuentaEstatusDescripcion_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Descripcion");
-    private final static QName _CuentaEstatusRFC_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "RFC");
-    private final static QName _SolicitudRegistroClienteRfcIntegrador_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "RfcIntegrador");
-    private final static QName _SolicitudRegistroClienteEmisor_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Emisor");
-    private final static QName _SolicitudRegistroClienteToken_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Token");
-    private final static QName _ResultadoRegistroEmisorClaveCertificado_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "ClaveCertificado");
-    private final static QName _ResultadoRegistroEmisorEstatus_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Estatus");
     private final static QName _AltaEmisorRazonSocial_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "RazonSocial");
     private final static QName _AltaEmisorCorreoElectronico_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "CorreoElectronico");
-    private final static QName _FallaServicioEvento_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Evento");
     private final static QName _FallaValidacionSugerencia_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Sugerencia");
     private final static QName _FallaValidacionAntecedente_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Antecedente");
     private final static QName _FallaValidacionNodo_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Nodo");
-    private final static QName _RespuestaRegistroRespuesta_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Respuesta");
+    private final static QName _FallaValidacionEvento_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Evento");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: Clientes
@@ -492,6 +492,123 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = SolicitudAvisosNuevos.class)
+    public JAXBElement<String> createSolicitudAvisosNuevosToken(String value) {
+        return new JAXBElement<String>(_SolicitudAvisosNuevosToken_QNAME, String.class, SolicitudAvisosNuevos.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = SolicitudAvisosNuevos.class)
+    public JAXBElement<String> createSolicitudAvisosNuevosRFC(String value) {
+        return new JAXBElement<String>(_SolicitudAvisosNuevosRFC_QNAME, String.class, SolicitudAvisosNuevos.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = RespuestaAsignacionTimbres.class)
+    public JAXBElement<String> createRespuestaAsignacionTimbresToken(String value) {
+        return new JAXBElement<String>(_SolicitudAvisosNuevosToken_QNAME, String.class, RespuestaAsignacionTimbres.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RfcIntegrador", scope = SolicitudRegistroCliente.class)
+    public JAXBElement<String> createSolicitudRegistroClienteRfcIntegrador(String value) {
+        return new JAXBElement<String>(_SolicitudRegistroClienteRfcIntegrador_QNAME, String.class, SolicitudRegistroCliente.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AltaEmisor }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Emisor", scope = SolicitudRegistroCliente.class)
+    public JAXBElement<AltaEmisor> createSolicitudRegistroClienteEmisor(AltaEmisor value) {
+        return new JAXBElement<AltaEmisor>(_SolicitudRegistroClienteEmisor_QNAME, AltaEmisor.class, SolicitudRegistroCliente.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = SolicitudRegistroCliente.class)
+    public JAXBElement<String> createSolicitudRegistroClienteToken(String value) {
+        return new JAXBElement<String>(_SolicitudAvisosNuevosToken_QNAME, String.class, SolicitudRegistroCliente.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ResultadoRegistroEmisor }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Respuesta", scope = RespuestaRegistro.class)
+    public JAXBElement<ResultadoRegistroEmisor> createRespuestaRegistroRespuesta(ResultadoRegistroEmisor value) {
+        return new JAXBElement<ResultadoRegistroEmisor>(_RespuestaRegistroRespuesta_QNAME, ResultadoRegistroEmisor.class, RespuestaRegistro.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CuentaEstatus }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Estatus", scope = RespuestaEstatusCuenta.class)
+    public JAXBElement<CuentaEstatus> createRespuestaEstatusCuentaEstatus(CuentaEstatus value) {
+        return new JAXBElement<CuentaEstatus>(_RespuestaEstatusCuentaEstatus_QNAME, CuentaEstatus.class, RespuestaEstatusCuenta.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "ClaveCertificado", scope = ResultadoRegistroEmisor.class)
+    public JAXBElement<String> createResultadoRegistroEmisorClaveCertificado(String value) {
+        return new JAXBElement<String>(_ResultadoRegistroEmisorClaveCertificado_QNAME, String.class, ResultadoRegistroEmisor.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Estatus", scope = ResultadoRegistroEmisor.class)
+    public JAXBElement<String> createResultadoRegistroEmisorEstatus(String value) {
+        return new JAXBElement<String>(_RespuestaEstatusCuentaEstatus_QNAME, String.class, ResultadoRegistroEmisor.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = ResultadoRegistroEmisor.class)
+    public JAXBElement<String> createResultadoRegistroEmisorRFC(String value) {
+        return new JAXBElement<String>(_SolicitudAvisosNuevosRFC_QNAME, String.class, ResultadoRegistroEmisor.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = SolicitudAsignacionTimbres.class)
+    public JAXBElement<String> createSolicitudAsignacionTimbresToken(String value) {
+        return new JAXBElement<String>(_SolicitudAvisosNuevosToken_QNAME, String.class, SolicitudAsignacionTimbres.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = SolicitudAsignacionTimbres.class)
+    public JAXBElement<String> createSolicitudAsignacionTimbresRFC(String value) {
+        return new JAXBElement<String>(_SolicitudAvisosNuevosRFC_QNAME, String.class, SolicitudAsignacionTimbres.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Codigo", scope = CuentaEstatus.class)
     public JAXBElement<String> createCuentaEstatusCodigo(String value) {
         return new JAXBElement<String>(_CuentaEstatusCodigo_QNAME, String.class, CuentaEstatus.class, value);
@@ -521,97 +638,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = CuentaEstatus.class)
     public JAXBElement<String> createCuentaEstatusRFC(String value) {
-        return new JAXBElement<String>(_CuentaEstatusRFC_QNAME, String.class, CuentaEstatus.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaSesion.class)
-    public JAXBElement<String> createFallaSesionDescripcion(String value) {
-        return new JAXBElement<String>(_CuentaEstatusDescripcion_QNAME, String.class, FallaSesion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RfcIntegrador", scope = SolicitudRegistroCliente.class)
-    public JAXBElement<String> createSolicitudRegistroClienteRfcIntegrador(String value) {
-        return new JAXBElement<String>(_SolicitudRegistroClienteRfcIntegrador_QNAME, String.class, SolicitudRegistroCliente.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AltaEmisor }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Emisor", scope = SolicitudRegistroCliente.class)
-    public JAXBElement<AltaEmisor> createSolicitudRegistroClienteEmisor(AltaEmisor value) {
-        return new JAXBElement<AltaEmisor>(_SolicitudRegistroClienteEmisor_QNAME, AltaEmisor.class, SolicitudRegistroCliente.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = SolicitudRegistroCliente.class)
-    public JAXBElement<String> createSolicitudRegistroClienteToken(String value) {
-        return new JAXBElement<String>(_SolicitudRegistroClienteToken_QNAME, String.class, SolicitudRegistroCliente.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = SolicitudAvisosNuevos.class)
-    public JAXBElement<String> createSolicitudAvisosNuevosToken(String value) {
-        return new JAXBElement<String>(_SolicitudRegistroClienteToken_QNAME, String.class, SolicitudAvisosNuevos.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = SolicitudAvisosNuevos.class)
-    public JAXBElement<String> createSolicitudAvisosNuevosRFC(String value) {
-        return new JAXBElement<String>(_CuentaEstatusRFC_QNAME, String.class, SolicitudAvisosNuevos.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "ClaveCertificado", scope = ResultadoRegistroEmisor.class)
-    public JAXBElement<String> createResultadoRegistroEmisorClaveCertificado(String value) {
-        return new JAXBElement<String>(_ResultadoRegistroEmisorClaveCertificado_QNAME, String.class, ResultadoRegistroEmisor.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Estatus", scope = ResultadoRegistroEmisor.class)
-    public JAXBElement<String> createResultadoRegistroEmisorEstatus(String value) {
-        return new JAXBElement<String>(_ResultadoRegistroEmisorEstatus_QNAME, String.class, ResultadoRegistroEmisor.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = ResultadoRegistroEmisor.class)
-    public JAXBElement<String> createResultadoRegistroEmisorRFC(String value) {
-        return new JAXBElement<String>(_CuentaEstatusRFC_QNAME, String.class, ResultadoRegistroEmisor.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CuentaEstatus }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Estatus", scope = RespuestaEstatusCuenta.class)
-    public JAXBElement<CuentaEstatus> createRespuestaEstatusCuentaEstatus(CuentaEstatus value) {
-        return new JAXBElement<CuentaEstatus>(_ResultadoRegistroEmisorEstatus_QNAME, CuentaEstatus.class, RespuestaEstatusCuenta.class, value);
+        return new JAXBElement<String>(_SolicitudAvisosNuevosRFC_QNAME, String.class, CuentaEstatus.class, value);
     }
 
     /**
@@ -638,34 +665,25 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = AltaEmisor.class)
     public JAXBElement<String> createAltaEmisorRFC(String value) {
-        return new JAXBElement<String>(_CuentaEstatusRFC_QNAME, String.class, AltaEmisor.class, value);
+        return new JAXBElement<String>(_SolicitudAvisosNuevosRFC_QNAME, String.class, AltaEmisor.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Evento", scope = FallaServicio.class)
-    public JAXBElement<String> createFallaServicioEvento(String value) {
-        return new JAXBElement<String>(_FallaServicioEvento_QNAME, String.class, FallaServicio.class, value);
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = SolicitudEstatusCuenta.class)
+    public JAXBElement<String> createSolicitudEstatusCuentaToken(String value) {
+        return new JAXBElement<String>(_SolicitudAvisosNuevosToken_QNAME, String.class, SolicitudEstatusCuenta.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaServicio.class)
-    public JAXBElement<String> createFallaServicioDescripcion(String value) {
-        return new JAXBElement<String>(_CuentaEstatusDescripcion_QNAME, String.class, FallaServicio.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = RespuestaAsignacionTimbres.class)
-    public JAXBElement<String> createRespuestaAsignacionTimbresToken(String value) {
-        return new JAXBElement<String>(_SolicitudRegistroClienteToken_QNAME, String.class, RespuestaAsignacionTimbres.class, value);
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = SolicitudEstatusCuenta.class)
+    public JAXBElement<String> createSolicitudEstatusCuentaRFC(String value) {
+        return new JAXBElement<String>(_SolicitudAvisosNuevosRFC_QNAME, String.class, SolicitudEstatusCuenta.class, value);
     }
 
     /**
@@ -675,6 +693,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Avisos", scope = RespuestaAvisosNuevos.class)
     public JAXBElement<Avisos> createRespuestaAvisosNuevosAvisos(Avisos value) {
         return new JAXBElement<Avisos>(_Avisos_QNAME, Avisos.class, RespuestaAvisosNuevos.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaSesion.class)
+    public JAXBElement<String> createFallaSesionDescripcion(String value) {
+        return new JAXBElement<String>(_CuentaEstatusDescripcion_QNAME, String.class, FallaSesion.class, value);
     }
 
     /**
@@ -710,7 +737,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Evento", scope = FallaValidacion.class)
     public JAXBElement<String> createFallaValidacionEvento(String value) {
-        return new JAXBElement<String>(_FallaServicioEvento_QNAME, String.class, FallaValidacion.class, value);
+        return new JAXBElement<String>(_FallaValidacionEvento_QNAME, String.class, FallaValidacion.class, value);
     }
 
     /**
@@ -726,45 +753,18 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = SolicitudAsignacionTimbres.class)
-    public JAXBElement<String> createSolicitudAsignacionTimbresToken(String value) {
-        return new JAXBElement<String>(_SolicitudRegistroClienteToken_QNAME, String.class, SolicitudAsignacionTimbres.class, value);
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Evento", scope = FallaServicio.class)
+    public JAXBElement<String> createFallaServicioEvento(String value) {
+        return new JAXBElement<String>(_FallaValidacionEvento_QNAME, String.class, FallaServicio.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = SolicitudAsignacionTimbres.class)
-    public JAXBElement<String> createSolicitudAsignacionTimbresRFC(String value) {
-        return new JAXBElement<String>(_CuentaEstatusRFC_QNAME, String.class, SolicitudAsignacionTimbres.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = SolicitudEstatusCuenta.class)
-    public JAXBElement<String> createSolicitudEstatusCuentaToken(String value) {
-        return new JAXBElement<String>(_SolicitudRegistroClienteToken_QNAME, String.class, SolicitudEstatusCuenta.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = SolicitudEstatusCuenta.class)
-    public JAXBElement<String> createSolicitudEstatusCuentaRFC(String value) {
-        return new JAXBElement<String>(_CuentaEstatusRFC_QNAME, String.class, SolicitudEstatusCuenta.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ResultadoRegistroEmisor }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Respuesta", scope = RespuestaRegistro.class)
-    public JAXBElement<ResultadoRegistroEmisor> createRespuestaRegistroRespuesta(ResultadoRegistroEmisor value) {
-        return new JAXBElement<ResultadoRegistroEmisor>(_RespuestaRegistroRespuesta_QNAME, ResultadoRegistroEmisor.class, RespuestaRegistro.class, value);
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaServicio.class)
+    public JAXBElement<String> createFallaServicioDescripcion(String value) {
+        return new JAXBElement<String>(_CuentaEstatusDescripcion_QNAME, String.class, FallaServicio.class, value);
     }
 
 }

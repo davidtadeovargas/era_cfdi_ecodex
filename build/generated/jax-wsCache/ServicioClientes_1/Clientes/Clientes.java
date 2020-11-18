@@ -28,8 +28,8 @@ public interface Clientes {
      * @param parameters
      * @return
      *     returns Clientes.RespuestaAvisosNuevos
-     * @throws ClientesAvisosNuevosFallaSesionFaultFaultMessage
      * @throws ClientesAvisosNuevosFallaServicioFaultFaultMessage
+     * @throws ClientesAvisosNuevosFallaSesionFaultFaultMessage
      */
     @WebMethod(operationName = "AvisosNuevos", action = "http://Ecodex.WS.Model/2011/CFDI/ServicioClientes/AvisosNuevos")
     @WebResult(name = "RespuestaAvisosNuevos", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")
@@ -60,8 +60,8 @@ public interface Clientes {
      * @param parameters
      * @return
      *     returns Clientes.RespuestaRegistro
-     * @throws ClientesRegistrarFallaSesionFaultFaultMessage
      * @throws ClientesRegistrarFallaServicioFaultFaultMessage
+     * @throws ClientesRegistrarFallaSesionFaultFaultMessage
      * @throws ClientesRegistrarFallaValidacionFaultFaultMessage
      */
     @WebMethod(operationName = "Registrar", action = "Registrar")
@@ -78,8 +78,8 @@ public interface Clientes {
      * @return
      *     returns Clientes.RespuestaAsignacionTimbres
      * @throws ClientesAsignacionTimbresFallaServicioFaultFaultMessage
-     * @throws ClientesAsignacionTimbresFallaSesionFaultFaultMessage
      * @throws ClientesAsignacionTimbresFallaValidacionFaultFaultMessage
+     * @throws ClientesAsignacionTimbresFallaSesionFaultFaultMessage
      */
     @WebMethod(operationName = "AsignacionTimbres", action = "AsignacionTimbres")
     @WebResult(name = "RespuestaAsignacionTimbres", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")

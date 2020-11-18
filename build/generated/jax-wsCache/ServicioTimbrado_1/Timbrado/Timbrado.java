@@ -45,8 +45,8 @@ public interface Timbrado {
      * @param parameters
      * @return
      *     returns Timbrado.RespuestaCancelaTimbrado
-     * @throws TimbradoCancelaTimbradoFallaValidacionFaultFaultMessage
      * @throws TimbradoCancelaTimbradoFallaSesionFaultFaultMessage
+     * @throws TimbradoCancelaTimbradoFallaValidacionFaultFaultMessage
      * @throws TimbradoCancelaTimbradoFallaServicioFaultFaultMessage
      */
     @WebMethod(operationName = "CancelaTimbrado", action = "http://Ecodex.WS.Model/2011/CFDI/Timbrado/CancelaTimbrado")
@@ -96,9 +96,9 @@ public interface Timbrado {
      * @param parameters
      * @return
      *     returns Timbrado.RespuestaObtenerQRTimbrado
-     * @throws TimbradoObtenerQRTimbradoFallaServicioFaultFaultMessage
      * @throws TimbradoObtenerQRTimbradoFallaSesionFaultFaultMessage
      * @throws TimbradoObtenerQRTimbradoFallaValidacionFaultFaultMessage
+     * @throws TimbradoObtenerQRTimbradoFallaServicioFaultFaultMessage
      */
     @WebMethod(operationName = "ObtenerQRTimbrado", action = "http://Ecodex.WS.Model/2011/CFDI/Timbrado/ObtenerQRTimbrado")
     @WebResult(name = "RespuestaObtenerQRTimbrado", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")

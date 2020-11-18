@@ -261,9 +261,11 @@ public class Cfdi {
 
     public void timbrar(String RFC) throws Exception {
         String token = sCreaToken(RFC);
+        System.out.println("timbrar token : " + token);
         java.util.StringTokenizer stk = new java.util.StringTokenizer(token, "|");
         token = stk.nextToken();
         String sTransId = stk.nextToken();
+        System.out.println("timbrar sTransId : " + sTransId);
         CrearXMLaTimbrar();
         byte[] encoded = null;
         try {
@@ -276,6 +278,7 @@ public class Cfdi {
         //XML = XML.replace("&","&amp;");
         
         if (esPrueba) {
+            
             pruebaTimbrado.ObjectFactory facCli = new pruebaTimbrado.ObjectFactory();
             pruebaTimbrado.ComprobanteXML xmlComp = new pruebaTimbrado.ComprobanteXML();
             xmlComp.setDatosXML(facCli.createComprobanteXMLDatosXML(XML));
@@ -292,9 +295,14 @@ public class Cfdi {
                 pruebaTimbrado.Timbrado_Service servicioX = new pruebaTimbrado.Timbrado_Service();
                 pruebaTimbrado.Timbrado puertoX = servicioX.getPuertoTimbrado();
 
+                System.out.println("Timbrando XML de prueba");
+                
                 wsResp = puertoX.timbraXML(wbPara);
                 sTransactionID = wsResp.getTransaccionID().toString();
                 XML = wsResp.getComprobanteXML().getValue().getDatosXML().getValue();
+                
+                System.out.println("XML obtenido de timbrando de prueba");
+                
                 flujoXML=XML;
                 CrearXMLTimbrado(rutaXMLTimbrado, XML);
                 obtenerDatosTimbrado(XML);
@@ -319,9 +327,14 @@ public class Cfdi {
                 Timbrado.Timbrado_Service servicioX = new Timbrado.Timbrado_Service();
                 Timbrado.Timbrado puertoX = servicioX.getPuertoTimbrado();
 
+                System.out.println("Timbrando XML");
+                
                 wsResp = puertoX.timbraXML(wbPara);
                 sTransactionID = wsResp.getTransaccionID().toString();
                 XML = wsResp.getComprobanteXML().getValue().getDatosXML().getValue();
+                
+                System.out.println("XML obtenido de timbrando");
+                
                 flujoXML=XML;
                 CrearXMLTimbrado(rutaXMLTimbrado, XML);
                 obtenerDatosTimbrado(XML);
@@ -474,14 +487,22 @@ public class Cfdi {
         return tmp;
     }
 
-    public void sellarCFDI(String xslt, String certificado, String llave, String pass) throws Exception {
+    public void sellarCFDI(String xslt, String llave, String pass) throws Exception {
         try {
+            System.out.println("Generando XML para timbrar");
             CrearXMLaTimbrar();
+            System.out.println("XML para timbrar generado");
+            System.out.println("Generando cadena original");
             String cadenaOriginal = creaCadena(xslt);
+            System.out.println("Cadena original generada: " + cadenaOriginal);
             //pruebas
             //pass = "12345678a";
+            System.out.println("Generando llave privada");
             PrivateKey prKey = pkGetKey(new File(llave), pass);
+            System.out.println("Llave privada generada");
+            System.out.println("Generando sello digital");
             String sSello = genSelDig(prKey, cadenaOriginal);
+            System.out.println("Sello digital generado: " + sSello);
             sSelloDigital=sSello;
             setAtributo("Sello", sSello);
         } catch (Exception ex) {
@@ -507,9 +528,12 @@ public class Cfdi {
         try {
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
+            System.out.println("Creando elemento raíz");
             DOMSource source = new DOMSource(rootElement);
+            System.out.println("Elemento raíz creado");
+            System.out.println("Leyendo XML desde la ruta: " + rutaGeneracionXml);
             StreamResult result = new StreamResult(new File(rutaGeneracionXml));
-
+            System.out.println("XML leído");
             transformer.transform(source, result);
         } catch (TransformerException ex) {
             throw new Exception("Error al crear xml: " + ex.getMessage());
@@ -531,19 +555,28 @@ public class Cfdi {
     }
 
     private String creaCadena(String xslt) {
+        System.out.println("creaCadena");
         TransformerFactory factory = TransformerFactory.newInstance();
+        System.out.println("creaCadena xslt : " + xslt);
         Source xsltS = new StreamSource(new File(xslt));
+        System.out.println("creaCadena xsltS : " + xsltS);
         ByteArrayOutputStream otp = new ByteArrayOutputStream();
         try {
             Transformer transformer = factory.newTransformer(xsltS);
+            System.out.println("creaCadena transformer");
             //Source text = new StreamSource(new File());
             byte[] encoded = Files.readAllBytes(Paths.get(rutaGeneracionXml));
+            System.out.println("creaCadena encoded");
             String content = new String(encoded, Charset.forName("UTF-8"));
+            System.out.println("creaCadena content : " + content);
             transformer.transform(new StreamSource(new StringReader(content)), new StreamResult(otp));
         } catch (IOException | TransformerException ex) {
             System.out.println(ex.getMessage());
         }
-        return otp.toString();
+        
+        final String opt = otp.toString();
+        System.out.println("creaCadena otp.toString() : " + opt);
+        return opt;
     }
 
     private PrivateKey pkGetKey(final File rutaLlave, final String password) {
@@ -581,7 +614,7 @@ public class Cfdi {
         }
     }
 
-    private String sCreaToken(String sRFC) {
+    private String sCreaToken(String sRFC) throws Exception {
         String sNewTok = "";
         
         if (esPrueba) {
@@ -601,6 +634,9 @@ public class Cfdi {
             /*Crea el token con el id integrador y el símbolo de tuberia*/
             sNewTok = toSHA((idEcodex + "|" + resp.getToken().getValue()).getBytes(),"SHA-1");
             sNewTok = sNewTok + "|" + sol.getTransaccionID();
+            
+            System.out.println("Token de timbrado de pruebas : " + sNewTok);
+            
         }else{
             Seguridad.ObjectFactory fac = new Seguridad.ObjectFactory();
         
@@ -609,15 +645,13 @@ public class Cfdi {
             sol.setTransaccionID(System.currentTimeMillis());
 
             Seguridad.RespuestaObtenerToken resp= fac.createRespuestaObtenerToken();
-            try {
-                resp = obtenerToken(sol);
-            } catch (Seguridad.SeguridadObtenerTokenFallaSesionFaultFaultMessage | Seguridad.SeguridadObtenerTokenFallaServicioFaultFaultMessage expnWSPAC) {
-                System.out.println(expnWSPAC.getMessage());
-            }
+            resp = obtenerToken(sol);
             
             /*Crea el token con el id integrador y el símbolo de tuberia*/
             sNewTok = toSHA((idEcodex + "|" + resp.getToken().getValue()).getBytes(),"SHA-1");
             sNewTok = sNewTok + "|" + sol.getTransaccionID();
+            
+            System.out.println("Token de timbrado : " + sNewTok);
         }
 
         /*Devuelve el resultado*/
@@ -667,6 +701,7 @@ public class Cfdi {
     public void timbradoPrueba(boolean esPrueba) {
         this.esPrueba = esPrueba;
         idEcodex = esPrueba == true ? "2b3a8764-d586-4543-9b7e-82834443f219" : "c2b7e31b-4e82-4a4a-82cf-8632969beb57";
+        System.out.println("Timbrado en modo de prueba idEcodex : " + idEcodex);
     }
 
     private static pruebaSeguridad.RespuestaObtenerToken obtenerToken(pruebaSeguridad.SolicitudObtenerToken parameters) throws pruebaSeguridad.SeguridadObtenerTokenFallaSesionFaultFaultMessage, pruebaSeguridad.SeguridadObtenerTokenFallaServicioFaultFaultMessage {

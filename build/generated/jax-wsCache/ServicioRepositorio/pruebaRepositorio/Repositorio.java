@@ -28,9 +28,9 @@ public interface Repositorio {
      * @param parameters
      * @return
      *     returns pruebaRepositorio.RespuestaEstatusComprobante
+     * @throws RepositorioEstatusComprobanteFallaSesionFaultFaultMessage
      * @throws RepositorioEstatusComprobanteFallaValidacionFaultFaultMessage
      * @throws RepositorioEstatusComprobanteFallaServicioFaultFaultMessage
-     * @throws RepositorioEstatusComprobanteFallaSesionFaultFaultMessage
      */
     @WebMethod(operationName = "EstatusComprobante", action = "http://Ecodex.WS.Model/2011/CFDI/ServicioRepositorio/EstatusComprobante")
     @WebResult(name = "RespuestaEstatusComprobante", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")
@@ -45,8 +45,8 @@ public interface Repositorio {
      * @param parameters
      * @return
      *     returns pruebaRepositorio.RespuestaObtenerComprobante
-     * @throws RepositorioObtenerComprobanteFallaSesionFaultFaultMessage
      * @throws RepositorioObtenerComprobanteFallaServicioFaultFaultMessage
+     * @throws RepositorioObtenerComprobanteFallaSesionFaultFaultMessage
      * @throws RepositorioObtenerComprobanteFallaValidacionFaultFaultMessage
      */
     @WebMethod(operationName = "ObtenerComprobante", action = "http://Ecodex.WS.Model/2011/CFDI/Repositorio/ObtenerComprobante")
@@ -79,9 +79,9 @@ public interface Repositorio {
      * @param parameters
      * @return
      *     returns pruebaRepositorio.RespuestaObtenerQR
-     * @throws RepositorioObtenerQRFallaValidacionFaultFaultMessage
      * @throws RepositorioObtenerQRFallaSesionFaultFaultMessage
      * @throws RepositorioObtenerQRFallaServicioFaultFaultMessage
+     * @throws RepositorioObtenerQRFallaValidacionFaultFaultMessage
      */
     @WebMethod(operationName = "ObtenerQR", action = "http://Ecodex.WS.Model/2011/CFDI/Repositorio/ObtenerQR")
     @WebResult(name = "RespuestaObtenerQR", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")

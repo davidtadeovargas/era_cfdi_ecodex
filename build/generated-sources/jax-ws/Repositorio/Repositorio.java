@@ -28,9 +28,9 @@ public interface Repositorio {
      * @param parameters
      * @return
      *     returns Repositorio.RespuestaEstatusComprobante
+     * @throws RepositorioEstatusComprobanteFallaValidacionFaultFaultMessage
      * @throws RepositorioEstatusComprobanteFallaSesionFaultFaultMessage
      * @throws RepositorioEstatusComprobanteFallaServicioFaultFaultMessage
-     * @throws RepositorioEstatusComprobanteFallaValidacionFaultFaultMessage
      */
     @WebMethod(operationName = "EstatusComprobante", action = "http://Ecodex.WS.Model/2011/CFDI/ServicioRepositorio/EstatusComprobante")
     @WebResult(name = "RespuestaEstatusComprobante", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")
@@ -45,8 +45,8 @@ public interface Repositorio {
      * @param parameters
      * @return
      *     returns Repositorio.RespuestaObtenerComprobante
-     * @throws RepositorioObtenerComprobanteFallaServicioFaultFaultMessage
      * @throws RepositorioObtenerComprobanteFallaValidacionFaultFaultMessage
+     * @throws RepositorioObtenerComprobanteFallaServicioFaultFaultMessage
      * @throws RepositorioObtenerComprobanteFallaSesionFaultFaultMessage
      */
     @WebMethod(operationName = "ObtenerComprobante", action = "http://Ecodex.WS.Model/2011/CFDI/Repositorio/ObtenerComprobante")
@@ -62,9 +62,9 @@ public interface Repositorio {
      * @param parameters
      * @return
      *     returns Repositorio.RespuestaCancelaComprobante
-     * @throws RepositorioCancelaComprobanteFallaServicioFaultFaultMessage
-     * @throws RepositorioCancelaComprobanteFallaSesionFaultFaultMessage
      * @throws RepositorioCancelaComprobanteFallaValidacionFaultFaultMessage
+     * @throws RepositorioCancelaComprobanteFallaSesionFaultFaultMessage
+     * @throws RepositorioCancelaComprobanteFallaServicioFaultFaultMessage
      */
     @WebMethod(operationName = "CancelaComprobante", action = "http://Ecodex.WS.Model/2011/CFDI/ServicioRepositorio/CancelaComprobante")
     @WebResult(name = "RespuestaCancelaComprobante", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")
